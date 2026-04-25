@@ -217,6 +217,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.2)}
     <li><a href="#about">강사 소개</a></li>
     <li><a href="#curriculum">커리큘럼</a></li>
     <li><a href="#textbooks">교재 안내</a></li>
+    <li><a href="/test">성적분석</a></li>
     <li><a href="#notice">공지사항</a></li>
     <li><a href="#contact">수강 문의</a></li>
   </ul>
@@ -452,6 +453,74 @@ footer p{font-size:13px;color:rgba(255,255,255,0.2)}
 </section>
 
 <!-- NOTICE -->
+<!-- ========== ORTHODOX 학습 시스템 (2026-04-25 추가) ========== -->
+<section id="learning" style="background:#0A0A0A;padding:120px 24px;border-top:1px solid #222;border-bottom:1px solid #222">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:60px">
+      <div style="font-family:'Cormorant Garamond',serif;color:#D4AF37;font-size:14px;letter-spacing:.3em;margin-bottom:14px">
+        LEARNING SYSTEM
+      </div>
+      <h2 style="font-family:'Noto Sans KR',sans-serif;font-weight:800;font-size:42px;color:#FFFFFF;letter-spacing:-.01em;margin:0">
+        ORTHODOX 학습 시스템
+      </h2>
+      <div style="color:#A0A0A0;font-size:16px;margin-top:18px;line-height:1.7">
+        주간평가부터 문제은행까지<br>
+        ORTHODOX 학생 전용 학습 도구
+      </div>
+    </div>
+    <div class="learning-cards" style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:900px;margin:0 auto">
+      <a href="/test" style="text-decoration:none;display:block">
+        <div style="background:#151515;border:1px solid #2A2A2A;border-radius:6px;padding:48px 36px;transition:all .3s;cursor:pointer;height:100%;position:relative;overflow:hidden"
+             onmouseover="this.style.borderColor='#D4AF37';this.style.transform='translateY(-4px)'"
+             onmouseout="this.style.borderColor='#2A2A2A';this.style.transform='translateY(0)'">
+          <div style="position:absolute;top:0;right:0;width:80px;height:80px;background:linear-gradient(135deg,transparent 50%,#D4AF37 50%);opacity:.15"></div>
+          <div style="font-family:'Cormorant Garamond',serif;color:#D4AF37;font-size:13px;letter-spacing:.24em;margin-bottom:20px">
+            01 · GRADE REPORT
+          </div>
+          <h3 style="font-family:'Noto Sans KR',sans-serif;font-weight:800;font-size:28px;color:#FFFFFF;letter-spacing:-.01em;margin:0 0 16px">
+            성적분석
+          </h3>
+          <p style="color:#D0D0D0;font-size:15px;line-height:1.8;margin:0 0 28px">
+            주간평가 결과를 13가지 항목으로 분석합니다.<br>
+            누적 점수 추이, 파트별 정답률, 반복 약점, 학습 우선순위, 오답노트, 전체 해설까지.
+          </p>
+          <div style="display:inline-flex;align-items:center;gap:10px;color:#D4AF37;font-weight:600;font-size:14px;letter-spacing:.06em">
+            입장하기
+            <span style="font-size:18px">→</span>
+          </div>
+        </div>
+      </a>
+      <div style="background:#0F0F0F;border:1px solid #1F1F1F;border-radius:6px;padding:48px 36px;position:relative;overflow:hidden;cursor:not-allowed">
+        <div style="position:absolute;top:0;right:0;width:80px;height:80px;background:linear-gradient(135deg,transparent 50%,#444 50%);opacity:.2"></div>
+        <div style="font-family:'Cormorant Garamond',serif;color:#777;font-size:13px;letter-spacing:.24em;margin-bottom:20px">
+          02 · QUESTION BANK
+        </div>
+        <h3 style="font-family:'Noto Sans KR',sans-serif;font-weight:800;font-size:28px;color:#A0A0A0;letter-spacing:-.01em;margin:0 0 16px">
+          문제은행
+        </h3>
+        <p style="color:#888;font-size:15px;line-height:1.8;margin:0 0 28px">
+          단원별 · 난이도별 · 개념별로 정리된 문제 풀이 시스템.<br>
+          개인 풀이 이력과 약점 분석까지 한 곳에서.
+        </p>
+        <div style="display:inline-flex;align-items:center;gap:10px;color:#777;font-weight:600;font-size:14px;letter-spacing:.06em;border:1px solid #333;padding:8px 18px;border-radius:20px">
+          준비 중
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:50px;color:#777;font-size:13px;line-height:1.8">
+      ORTHODOX SCIENCE 수강생만 이용 가능합니다.<br>
+      이메일과 4자리 비밀번호로 로그인하세요. 비밀번호 분실 시 인증코드로 재설정 가능.
+    </div>
+  </div>
+</section>
+<style>
+  @media (max-width:760px){
+    #learning{padding:80px 20px !important}
+    #learning h2{font-size:30px !important}
+    #learning .learning-cards{grid-template-columns:1fr !important}
+  }
+</style>
+
 <section class="notice" id="notice">
 <div class="container">
   <div class="sec-hd">
