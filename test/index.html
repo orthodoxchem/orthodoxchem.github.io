@@ -5,134 +5,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 <title>ORTHODOX SCIENCE · 성적분석</title>
 <meta name="description" content="ORTHODOX SCIENCE 주간평가 성적분석 시스템">
+<meta http-equiv="refresh" content="0;url=https://script.google.com/macros/s/AKfycbwP6jOQ0ePgHVgtQ0LTJmUonRqjzQf3TobvPhf8sPvuMXIpoWDCU8mccN6vGFHLXBL0/exec">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Sans+KR:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Sans+KR:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#0A0A0A; --bg2:#111; --card:#151515;
-    --accent:#D4AF37; --accent-l:#E2C254;
-    --txt:#FFFFFF; --body:#D0D0D0; --mid:#A0A0A0; --sub:#777;
-    --border:#222; --border2:#2A2A2A;
-  }
   *{box-sizing:border-box;margin:0;padding:0}
-  html,body{background:var(--bg);color:var(--body);
-    font-family:'Noto Sans KR',-apple-system,sans-serif;line-height:1.6;
-    min-height:100vh;display:flex;flex-direction:column}
-  a{color:var(--accent);text-decoration:none}
-
-  /* ===== 미니 네비 ===== */
-  .navbar{position:sticky;top:0;background:rgba(10,10,10,.92);backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--border);z-index:50}
-  .nav-inner{max-width:1200px;margin:0 auto;padding:14px 24px;
-    display:flex;justify-content:space-between;align-items:center;gap:16px}
-  .nav-brand{display:flex;align-items:center;gap:12px}
-  .nav-brand-text{font-family:'Cormorant Garamond',serif;font-size:18px;
-    color:var(--accent);letter-spacing:.18em}
-  .nav-back{font-size:13px;color:var(--mid);letter-spacing:.08em;
-    border:1px solid var(--border2);padding:8px 14px;border-radius:20px;
-    transition:all .2s}
-  .nav-back:hover{color:var(--accent);border-color:var(--accent)}
-
-  /* ===== 메인 컨텐츠 ===== */
-  .main{flex:1;display:flex;flex-direction:column}
-  .iframe-wrap{flex:1;min-height:calc(100vh - 60px);background:#fff;border:none}
-  .iframe-wrap iframe{width:100%;height:100%;min-height:calc(100vh - 60px);border:none;display:block}
-
-  /* ===== 폴백 (iframe 차단 시) ===== */
-  .fallback{display:none;max-width:520px;margin:80px auto;padding:48px 32px;
-    text-align:center;border:1px solid var(--border2);border-radius:6px;background:var(--card)}
-  .fallback h1{font-family:'Cormorant Garamond',serif;font-size:28px;
-    color:var(--accent);letter-spacing:.14em;margin-bottom:14px}
-  .fallback p{color:var(--body);font-size:15px;margin-bottom:24px;line-height:1.8}
-  .fallback .btn{display:inline-block;background:var(--accent);color:#000;
-    padding:14px 30px;border-radius:30px;font-weight:600;letter-spacing:.06em;
-    transition:all .2s}
-  .fallback .btn:hover{background:var(--accent-l)}
-  .fallback .url{display:block;margin-top:16px;font-size:12px;color:var(--sub);word-break:break-all}
-
-  /* ===== 푸터 ===== */
-  .footer{padding:14px 24px;text-align:center;font-size:12px;color:var(--sub);
-    border-top:1px solid var(--border);background:var(--bg)}
-  .footer .br{color:var(--accent);letter-spacing:.12em}
-
-  @media (max-width:760px){
-    .nav-inner{padding:10px 16px}
-    .nav-brand-text{font-size:15px}
-    .nav-back{font-size:12px;padding:6px 12px}
-  }
+  html,body{background:#0A0A0A;color:#D0D0D0;
+    font-family:'Noto Sans KR',-apple-system,sans-serif;
+    min-height:100vh;display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:20px}
+  .wrap{max-width:480px}
+  .brand{font-family:'Cormorant Garamond',serif;color:#D4AF37;
+    font-size:18px;letter-spacing:.24em;margin-bottom:32px}
+  .spinner{width:42px;height:42px;border:2px solid #2A2A2A;border-top-color:#D4AF37;
+    border-radius:50%;margin:0 auto 24px;animation:spin .9s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .msg{color:#A0A0A0;font-size:14px;line-height:1.7}
+  .fallback{margin-top:28px;display:none}
+  .fallback a{display:inline-block;background:#D4AF37;color:#000;
+    padding:12px 28px;border-radius:30px;text-decoration:none;
+    font-weight:600;letter-spacing:.04em;font-size:14px}
+  .fallback a:hover{background:#E2C254}
 </style>
 </head>
 <body>
-
-<nav class="navbar">
-  <div class="nav-inner">
-    <div class="nav-brand">
-      <span class="nav-brand-text">ORTHODOX · SCIENCE</span>
+  <div class="wrap">
+    <div class="brand">ORTHODOX · SCIENCE</div>
+    <div class="spinner"></div>
+    <div class="msg">성적분석 페이지로 이동 중...</div>
+    <div class="fallback" id="fb">
+      <a href="https://script.google.com/macros/s/AKfycbwP6jOQ0ePgHVgtQ0LTJmUonRqjzQf3TobvPhf8sPvuMXIpoWDCU8mccN6vGFHLXBL0/exec">
+        성적분석 입장 →
+      </a>
     </div>
-    <a class="nav-back" href="/">← 메인으로</a>
   </div>
-</nav>
-
-<main class="main">
-  <!-- GAS 웹앱 임베드 -->
-  <!-- 배포 후 setupOnce 결과의 webapp URL을 아래 src에 입력하세요 -->
-  <div class="iframe-wrap">
-    <iframe
-      id="gas-frame"
-      src="https://script.google.com/macros/s/AKfycbwP6jOQ0ePgHVgtQ0LTJmUonRqjzQf3TobvPhf8sPvuMXIpoWDCU8mccN6vGFHLXBL0/exec"
-      title="ORTHODOX 성적분석"
-      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"
-      allow="clipboard-write"
-      onload="onFrameLoad()"
-      onerror="showFallback()"></iframe>
-  </div>
-
-  <!-- iframe 차단 폴백 -->
-  <div id="fallback" class="fallback">
-    <h1>성적분석 페이지</h1>
-    <p>아래 버튼을 눌러 성적분석 페이지로 이동하세요.<br>
-    이메일과 4자리 비밀번호로 로그인하실 수 있습니다.</p>
-    <a id="fallback-link" class="btn" href="https://script.google.com/macros/s/AKfycbwP6jOQ0ePgHVgtQ0LTJmUonRqjzQf3TobvPhf8sPvuMXIpoWDCU8mccN6vGFHLXBL0/exec" target="_blank" rel="noopener">성적분석 입장 →</a>
-    <span class="url" id="fallback-url">https://script.google.com/macros/s/AKfycbwP6jOQ0ePgHVgtQ0LTJmUonRqjzQf3TobvPhf8sPvuMXIpoWDCU8mccN6vGFHLXBL0/exec</span>
-  </div>
-</main>
-
-<footer class="footer">
-  <span class="br">ORTHODOX SCIENCE</span> · 성적분석 시스템
-</footer>
-
 <script>
-  // GAS_WEBAPP_URL이 placeholder인 경우 폴백 표시
-  (function(){
-    var iframe = document.getElementById('gas-frame');
-    var src = iframe ? iframe.getAttribute('src') : '';
-    if (!src || src.indexOf('GAS_WEBAPP_URL') === 0) {
-      showFallback();
-      return;
-    }
-    // iframe 로드 타임아웃 (5초)
-    setTimeout(function(){
-      try {
-        // iframe 내부 접근 시도 - cross-origin이면 에러
-        var doc = iframe.contentDocument;
-        if (!doc) showFallback();
-      } catch (e) {
-        // cross-origin은 정상이므로 무시 (iframe은 잘 로드된 것)
-      }
-    }, 5000);
-  })();
-
-  function onFrameLoad(){
-    // iframe 로드 성공
-  }
-  function showFallback(){
-    var iframe = document.querySelector('.iframe-wrap');
-    if (iframe) iframe.style.display = 'none';
-    var fb = document.getElementById('fallback');
-    if (fb) fb.style.display = 'block';
-  }
+  // 즉시 JS redirect (meta refresh 백업)
+  var GAS_URL = 'https://script.google.com/macros/s/AKfycbwP6jOQ0ePgHVgtQ0LTJmUonRqjzQf3TobvPhf8sPvuMXIpoWDCU8mccN6vGFHLXBL0/exec';
+  window.location.replace(GAS_URL);
+  // 3초 후에도 안 가면 수동 버튼 노출
+  setTimeout(function(){ document.getElementById('fb').style.display = 'block'; }, 3000);
 </script>
-
+<noscript>
+  <p style="color:#fff;margin-top:20px">JavaScript가 비활성화되어 있습니다.<br>
+    <a href="https://script.google.com/macros/s/AKfycbwP6jOQ0ePgHVgtQ0LTJmUonRqjzQf3TobvPhf8sPvuMXIpoWDCU8mccN6vGFHLXBL0/exec" style="color:#D4AF37">여기 클릭</a>
+  </p>
+</noscript>
 </body>
 </html>
