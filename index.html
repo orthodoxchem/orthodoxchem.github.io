@@ -20,7 +20,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.9
 nav.scrolled{border-bottom-color:rgba(212,175,55,0.15);box-shadow:0 2px 40px rgba(0,0,0,0.5)}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 40px}
 .nav-left{display:flex;align-items:center;gap:16px;text-decoration:none}
-.nav-brand{font-family:'Noto Sans KR',sans-serif;font-size:18px;font-weight:700;color:var(--accent);letter-spacing:3px}
+.nav-brand{font-family:'Noto Sans KR',sans-serif;font-size:18px;font-weight:700;color:var(--accent);letter-spacing:3px;white-space:nowrap}
 .nav-links{display:flex;gap:32px;list-style:none}
 .nav-links a{text-decoration:none;color:var(--sub);font-size:15px;font-weight:500;transition:color .3s}
 .nav-links a:hover{color:var(--accent)}
@@ -104,6 +104,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.2)}
 /* MOBILE */
 @media(max-width:768px){
   .nav-links{display:none}
+  .nav-brand{font-size:13px;letter-spacing:2px}
   .hero h1{font-size:38px}
   .hero-brand{font-size:18px;letter-spacing:4px;padding:10px 22px}
   .sec-title{font-size:30px}
@@ -111,10 +112,13 @@ footer p{font-size:13px;color:rgba(255,255,255,0.2)}
   .cur-card h3{font-size:24px}
   .cur-textbook{padding:18px 20px;gap:14px}
   section{padding:80px 24px}
-  .nav-inner{padding:14px 20px}
+  .nav-inner{padding:14px 16px;gap:8px}
   .contact-card{padding:32px 36px;min-width:auto;flex:1}
   .learning-cards{grid-template-columns:1fr}
   .lc{padding:36px 28px}
+}
+@media(max-width:380px){
+  .nav-brand{font-size:11px;letter-spacing:1.5px}
 }
 
 /* ANIM */
@@ -138,7 +142,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.2)}
       <text x="19" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="18" fill="#D4AF37" font-weight="400">Ox</text>
       <text x="19" y="36" text-anchor="middle" font-family="Georgia,serif" font-size="4.5" fill="#D4AF37" letter-spacing="1.5" opacity="0.5">ORTHODOX</text>
     </svg>
-    <span class="nav-brand">ORTHODOX</span>
+    <span class="nav-brand">ORTHODOX SCIENCE</span>
   </a>
   <ul class="nav-links">
     <li><a href="#learning">학습 시스템</a></li>
@@ -331,12 +335,6 @@ footer p{font-size:13px;color:rgba(255,255,255,0.2)}
       <h4>전화 문의</h4>
       <p>평일 10:00 – 22:00</p>
       <div class="contact-val">010-2842-1881</div>
-    </div>
-    <div class="contact-card" onclick="location.href='mailto:tomocm@naver.com'">
-      <div class="icon">✉️</div>
-      <h4>이메일</h4>
-      <p>24시간 접수</p>
-      <div class="contact-val">tomocm@naver.com</div>
     </div>
   </div>
 </div>
