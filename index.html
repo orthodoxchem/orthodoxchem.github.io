@@ -44,10 +44,6 @@ section{padding:120px 40px}
 .sec-title{font-family:'Noto Sans KR',sans-serif;font-size:42px;font-weight:800;margin-bottom:18px;color:#fff;letter-spacing:-0.5px}
 .sec-desc{font-size:18px;color:var(--mid);max-width:560px;font-weight:300;line-height:1.9}
 .gold-line{width:48px;height:2px;background:var(--accent);margin-top:20px}
-.sub-hd{margin:80px 0 32px}
-.sub-hd:first-child{margin-top:0}
-.sub-hd-label{font-size:12px;letter-spacing:4px;color:var(--accent);font-weight:600;margin-bottom:10px}
-.sub-hd-title{font-size:28px;color:#fff;font-weight:700;letter-spacing:-0.3px}
 
 /* LEARNING SYSTEM */
 .learning{background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
@@ -74,21 +70,18 @@ section{padding:120px 40px}
 .cur-tab:hover{border-color:rgba(212,175,55,0.4);color:var(--body)}
 .cur-panel{display:none}
 .cur-panel.active{display:block}
-.cur-empty{background:var(--card);border:1px solid var(--border);padding:80px 40px;text-align:center;color:var(--sub);font-size:16px;line-height:1.9}
-.cur-empty strong{color:var(--body);font-size:24px;font-weight:700;display:block;margin-bottom:14px}
-.cur-empty .badge{display:inline-block;padding:6px 18px;border:1px solid rgba(212,175,55,0.3);color:var(--accent);font-size:12px;letter-spacing:2px;margin-bottom:20px}
-
-/* TEXTBOOKS */
-.book-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px}
-.book-card{background:var(--card);border:1px solid var(--border);padding:36px 28px;text-align:center;transition:.3s}
-.book-card:hover{border-color:rgba(212,175,55,0.3);transform:translateY(-3px)}
-.book-card .b-icon{width:56px;height:72px;margin:0 auto 22px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:18px;font-weight:600;letter-spacing:2px}
-.book-card.pending .b-icon{background:#1f1f1f;color:#555;border:1px solid var(--border2)}
-.book-card h4{font-size:18px;color:#fff;font-weight:700;margin-bottom:8px}
-.book-card .b-cat{font-size:12px;letter-spacing:2px;color:var(--accent);margin-bottom:14px;font-weight:600}
-.book-card.pending .b-cat{color:var(--sub)}
-.book-card .b-status{font-size:13px;color:var(--mid);margin-top:14px}
-.book-card.pending .b-status{color:#555}
+.cur-card{background:var(--card);border:1px solid var(--border);padding:48px 40px}
+.cur-card .badge{display:inline-block;padding:6px 18px;border:1px solid rgba(212,175,55,0.3);color:var(--accent);font-size:12px;letter-spacing:2px;margin-bottom:18px;font-weight:600}
+.cur-card h3{font-size:32px;font-weight:800;color:#fff;margin-bottom:30px;letter-spacing:-0.3px}
+.cur-textbook{display:flex;align-items:center;gap:18px;padding:22px 26px;background:var(--bg);border:1px solid var(--border2);border-radius:4px;margin-bottom:28px}
+.cur-textbook .b-icon{width:44px;height:56px;flex-shrink:0;border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#fff;font-size:14px;font-weight:600;letter-spacing:1px}
+.cur-textbook.pending .b-icon{background:#1f1f1f;color:#555;border:1px solid var(--border2)}
+.cur-textbook .tb-info{flex:1}
+.cur-textbook .tb-label{font-size:11px;letter-spacing:2px;color:var(--sub);font-weight:600;margin-bottom:4px}
+.cur-textbook .tb-name{font-size:16px;color:var(--body);font-weight:600}
+.cur-textbook.pending .tb-name{color:var(--sub)}
+.cur-detail{padding:40px 0 0;border-top:1px solid var(--border);color:var(--mid);font-size:15px;line-height:1.9}
+.cur-detail .label{font-size:11px;letter-spacing:2px;color:var(--accent);font-weight:600;margin-bottom:12px}
 
 /* CONTACT */
 .contact{background:var(--bg2);text-align:center;border-top:1px solid var(--border);position:relative;overflow:hidden}
@@ -114,7 +107,9 @@ footer p{font-size:13px;color:rgba(255,255,255,0.2)}
   .hero h1{font-size:38px}
   .hero-brand{font-size:18px;letter-spacing:4px;padding:10px 22px}
   .sec-title{font-size:30px}
-  .sub-hd-title{font-size:22px}
+  .cur-card{padding:32px 24px}
+  .cur-card h3{font-size:24px}
+  .cur-textbook{padding:18px 20px;gap:14px}
   section{padding:80px 24px}
   .nav-inner{padding:14px 20px}
   .contact-card{padding:32px 36px;min-width:auto;flex:1}
@@ -205,20 +200,14 @@ footer p{font-size:13px;color:rgba(255,255,255,0.2)}
 </div>
 </section>
 
-<!-- 수업 안내 (커리큘럼 + 교재) -->
+<!-- 수업 안내 (커리큘럼 + 교재 통합) -->
 <section id="class">
 <div class="container">
   <div class="sec-hd">
     <div class="sec-label">CLASS</div>
     <div class="sec-title">수업 안내</div>
     <div class="gold-line"></div>
-    <div class="sec-desc">목표와 수준에 맞춘 체계적인 커리큘럼과 교재를 제공합니다.</div>
-  </div>
-
-  <!-- 커리큘럼 -->
-  <div class="sub-hd">
-    <div class="sub-hd-label">CURRICULUM</div>
-    <div class="sub-hd-title">커리큘럼</div>
+    <div class="sec-desc">목표와 수준에 맞춘 체계적인 커리큘럼과 ORTHODOX 교재를 제공합니다.</div>
   </div>
 
   <div class="cur-tabs">
@@ -229,80 +218,101 @@ footer p{font-size:13px;color:rgba(255,255,255,0.2)}
     <button class="cur-tab" onclick="switchTab(4)">통합과학</button>
   </div>
 
+  <!-- 탭 1: 일반화학 -->
   <div class="cur-panel active">
-    <div class="cur-empty">
+    <div class="cur-card">
       <span class="badge">GENERAL CHEMISTRY</span>
-      <strong>일반화학</strong>
-      커리큘럼 상세 내용은 곧 업데이트됩니다.
+      <h3>일반화학</h3>
+      <div class="cur-textbook">
+        <div class="b-icon" style="background:linear-gradient(160deg,#1a3a25,#2a5a3a)">Ox</div>
+        <div class="tb-info">
+          <div class="tb-label">TEXTBOOK</div>
+          <div class="tb-name">탁쌤의 오소독스 일반화학</div>
+        </div>
+      </div>
+      <div class="cur-detail">
+        <div class="label">CURRICULUM</div>
+        커리큘럼 상세 내용은 곧 업데이트됩니다.
+      </div>
     </div>
   </div>
+
+  <!-- 탭 2: 일반생물 -->
   <div class="cur-panel">
-    <div class="cur-empty">
+    <div class="cur-card">
       <span class="badge">GENERAL BIOLOGY</span>
-      <strong>일반생물</strong>
-      커리큘럼 상세 내용은 곧 업데이트됩니다.
+      <h3>일반생물</h3>
+      <div class="cur-textbook pending">
+        <div class="b-icon">Ox</div>
+        <div class="tb-info">
+          <div class="tb-label">TEXTBOOK</div>
+          <div class="tb-name">교재 준비 중</div>
+        </div>
+      </div>
+      <div class="cur-detail">
+        <div class="label">CURRICULUM</div>
+        커리큘럼 상세 내용은 곧 업데이트됩니다.
+      </div>
     </div>
   </div>
+
+  <!-- 탭 3: 유기화학 -->
   <div class="cur-panel">
-    <div class="cur-empty">
+    <div class="cur-card">
       <span class="badge">ORGANIC CHEMISTRY</span>
-      <strong>유기화학</strong>
-      커리큘럼 상세 내용은 곧 업데이트됩니다.
+      <h3>유기화학</h3>
+      <div class="cur-textbook">
+        <div class="b-icon" style="background:linear-gradient(160deg,#2a1525,#45253a)">Ox</div>
+        <div class="tb-info">
+          <div class="tb-label">TEXTBOOK</div>
+          <div class="tb-name">탁쌤의 오소독스 유기화학</div>
+        </div>
+      </div>
+      <div class="cur-detail">
+        <div class="label">CURRICULUM</div>
+        커리큘럼 상세 내용은 곧 업데이트됩니다.
+      </div>
     </div>
   </div>
+
+  <!-- 탭 4: 화학1 -->
   <div class="cur-panel">
-    <div class="cur-empty">
+    <div class="cur-card">
       <span class="badge">CHEMISTRY 1</span>
-      <strong>화학1</strong>
-      커리큘럼 상세 내용은 곧 업데이트됩니다.
+      <h3>화학1</h3>
+      <div class="cur-textbook">
+        <div class="b-icon" style="background:linear-gradient(160deg,#1a2540,#253660)">Ox</div>
+        <div class="tb-info">
+          <div class="tb-label">TEXTBOOK</div>
+          <div class="tb-name">탁쌤의 오소독스 화학1</div>
+        </div>
+      </div>
+      <div class="cur-detail">
+        <div class="label">CURRICULUM</div>
+        커리큘럼 상세 내용은 곧 업데이트됩니다.
+      </div>
     </div>
   </div>
+
+  <!-- 탭 5: 통합과학 -->
   <div class="cur-panel">
-    <div class="cur-empty">
+    <div class="cur-card">
       <span class="badge">INTEGRATED SCIENCE</span>
-      <strong>통합과학</strong>
-      커리큘럼 상세 내용은 곧 업데이트됩니다.
+      <h3>통합과학</h3>
+      <div class="cur-textbook pending">
+        <div class="b-icon">Ox</div>
+        <div class="tb-info">
+          <div class="tb-label">TEXTBOOK</div>
+          <div class="tb-name">교재 준비 중</div>
+        </div>
+      </div>
+      <div class="cur-detail">
+        <div class="label">CURRICULUM</div>
+        커리큘럼 상세 내용은 곧 업데이트됩니다.
+      </div>
     </div>
   </div>
 
-  <!-- 교재 시리즈 -->
-  <div class="sub-hd">
-    <div class="sub-hd-label">TEXTBOOKS</div>
-    <div class="sub-hd-title">ORTHODOX 교재 시리즈</div>
-  </div>
-
-  <div class="book-grid">
-    <div class="book-card">
-      <div class="b-icon" style="background:linear-gradient(160deg,#1a3a25,#2a5a3a)">Ox</div>
-      <div class="b-cat">GENERAL CHEMISTRY</div>
-      <h4>일반화학</h4>
-      <div class="b-status">탁쌤의 오소독스 일반화학</div>
-    </div>
-    <div class="book-card pending">
-      <div class="b-icon">Ox</div>
-      <div class="b-cat">GENERAL BIOLOGY</div>
-      <h4>일반생물</h4>
-      <div class="b-status">준비 중</div>
-    </div>
-    <div class="book-card">
-      <div class="b-icon" style="background:linear-gradient(160deg,#2a1525,#45253a)">Ox</div>
-      <div class="b-cat">ORGANIC CHEMISTRY</div>
-      <h4>유기화학</h4>
-      <div class="b-status">탁쌤의 오소독스 유기화학</div>
-    </div>
-    <div class="book-card">
-      <div class="b-icon" style="background:linear-gradient(160deg,#1a2540,#253660)">Ox</div>
-      <div class="b-cat">CHEMISTRY 1</div>
-      <h4>화학1</h4>
-      <div class="b-status">탁쌤의 오소독스 화학1</div>
-    </div>
-    <div class="book-card pending">
-      <div class="b-icon">Ox</div>
-      <div class="b-cat">INTEGRATED SCIENCE</div>
-      <h4>통합과학</h4>
-      <div class="b-status">준비 중</div>
-    </div>
-  </div>
 </div>
 </section>
 
@@ -354,7 +364,7 @@ const obs=new IntersectionObserver(es=>{
     }
   });
 },{threshold:0.12});
-document.querySelectorAll('.book-card,.contact-card,.cur-empty,.lc').forEach(el=>{
+document.querySelectorAll('.contact-card,.cur-card,.lc').forEach(el=>{
   el.style.opacity='0';
   el.style.transform='translateY(20px)';
   el.style.transition='opacity .6s ease,transform .6s ease';
